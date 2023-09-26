@@ -1,5 +1,4 @@
 let circles = [];
-const numCircles = 10; // Adjust the number of circles as needed
 const maxCircles = 20; // Maximum number of circles on the canvas
 const newCircleInterval = 2000; // Interval for creating new circles (milliseconds)
 const circleLifetime = 5000; // Lifetime of circles (milliseconds)
@@ -11,8 +10,13 @@ function setup() {
   stroke(255);
   background(255);
 
-  // Create initial circles
-  for (let i = 0; i < numCircles; i++) {
+  // Generate a random number of initial circles between a minimum and maximum value
+  const minInitialCircles = 5; // Adjust as needed
+  const maxInitialCircles = 15; // Adjust as needed
+  const numInitialCircles = int(random(minInitialCircles, maxInitialCircles + 1));
+
+  // Create the random number of initial circles
+  for (let i = 0; i < numInitialCircles; i++) {
     addNewCircle();
   }
 }
