@@ -5,6 +5,8 @@
   <title>Your Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
     /* Reset some default styles */
     body, ul {
@@ -16,25 +18,27 @@
     header {
       background-color: #fff; /* White background */
       color: #333; /* Text color */
-      padding: 10px 0;
+      padding: 10px;
       display: flex; /* Use flexbox to align items */
-      justify-content: flex-start; /* Align items to the start (left) */
+      justify-content: space-between; /* Spread items horizontally */
       align-items: center; /* Center vertically */
     }
     
     nav ul {
       list-style: none;
+      text-align: right;
     }
     
     nav ul li {
       display: inline;
-      margin-right: 20px;
+      margin-left: 20px;
     }
     
     nav a {
       text-decoration: none;
       color: #333; /* Text color */
       font-family: serif; /* Use serif font */
+      font-size: 20px; /* Adjust the font size as needed */
     }
     
     /* Style sections */
@@ -53,9 +57,10 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <!-- Replace text with Font Awesome icons -->
+        <li><a href="#home"><i class="fas fa-home"></i></a></li>
+        <li><a href="#about"><i class="fas fa-user"></i></a></li>
+        <li><a href="#projects"><i class="fas fa-folder"></i></a></li>
       </ul>
     </nav>
   </header>
@@ -78,4 +83,3 @@
   <script src="sketch.js"></script>
 </body>
 </html>
-
