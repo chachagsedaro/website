@@ -134,4 +134,3 @@ class Circle {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-
