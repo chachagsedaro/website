@@ -2,82 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>chacha g se daro</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <!-- Include Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>( ノ・・)ノ</title>
   <style>
-    /* Reset some default styles */
-    body, ul {
-      
-    }
-    
-    /* Style sections */
-    section {
-      position: absolute;
-    }
-    
-    h1  {
-      font-family: 'Inter', sans-serif;
-      font-weight: 100;
-      white-space: pre;
-      
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ff8989;
     }
 
-     h2 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 130;
-
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #ff8989; /* Pastel color for the header background */
     }
 
-    p {
-      font-family: 'Inter', sans-serif;
-      font-weight: 200;
-      white-space: pre;
+    button {
+      padding: 10px;
+      background-color: #87CEFA; /* Pastel color for the button background */
+      border: none;
+      border-radius: 5px;
+      color: #fff; /* White text on pastel button */
+      cursor: pointer;
+      text-decoration: none; /* Remove default underline style for links */
     }
-    #home {
-      margin-top: 0px; /* Adjust the value as needed */
-    }    
-    #about {
-      margin-top: 900px; /* Adjust the value as needed */
+
+    button:hover {
+      background-color: #6495ED; /* Darker shade for the button background on hover */
     }
-    #projects {
-      margin-top: 1800px; /* Adjust the value as needed */
+
+    .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+    
+    img {
+    max-width: 25%;
+    max-height:15%;
+    float: inline-start;}
+    
+    .text {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 10%;
+    float: right;
+  }
+
+    #content {
+      max-width: 600px;
+      text-align: left;
+      padding: 20px;
     }
     
-    /* Add more custom styling as needed */
+
+    #punjabiText {
+      font-size: 500; /* Three times the size of English text */
+    }
+
+    #image {
+      max-width: 300px;
+      height: auto;
+      margin-right: 20px;
+      margin-top: 150px;
+    }
   </style>
 </head>
 <body>
-  <script src="sketch.js"></script>
-    <section id="home">
-      <h1 style="text-align:left"> Home </h1>
-      <h2 style = "text-align: center", "margin-left: 20">              Welcome to my website <br>
+
+  <header>
+    <a href="home.html"><button>Home</button></a>
+    <div>
+      <a href="projects.html"><button>Projects</button></a>
+      <a href="work.html"><button>Work</button></a>
+      <a href="about.html"><button>About Me</button></a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="image">
+    <img id="image" src="image.jpeg" alt="Image">
+  </div>
+
+    <div class = "text" id="punjabiText">
+      ਜੀ ਆਇਆਂ ਨੂੰ | <br>
+      Welcome. <br>
+
+      <br>
       
-                              If you're here to learn more about me, feel free to scroll down <br>
-      
-              If you're here to play, try chasing some of the circles with your mouse cursor and see what happens <br>
-      </h2>
-      
-    </section>
+      ਮੇਰਾ ਨਾਮ ਵੰਸ਼ ਮੁਰਾਦ ਕਾਲੀਆ ਹੈ | <br>
+      My name is Vansh Murad Kalia. <br><br>
 
-    <section id="about">
-  
-      <h2>About Me</h2>
-      <!-- Add content for your About Me section here -->
-      <script src="sketch.js"></script>
+      <br>
 
-    </section>
+      ਅਤੇ ਮੈਨੂੰ ਚੀਜ਼ਾਂ ਕਰਨਾ ਬਹੁਤ ਪਸੰਦ ਹੈ | <br>
+      And I love to do things. 
+    </div>
+  </div>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <!-- Add content for your Projects section here -->
-      <script src="sketch.js"></script>
-
-    </section>
-
-    <script src="sketch.js"></script>
-</div>
 </body>
 </html>
+
