@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>( ノ・・)ノ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6b6bf0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #6b6bf0; /* Pastel color for the header background */
+        }
+
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        header button {
+            background-color: #87CEFA;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        header button:hover {
+            background-color: #6495ED;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .project-tile {
+            position: relative;
+            background-color: #87CEFA;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-tile:hover {
+            background-color: #6495ED;
+        }
+
+        .project-tile a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-decoration: none;
+            color: #000; /* Adjust the text color */
+        }
+
+        .project-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+            transition: bottom 0.3s ease;
+        }
+
+        .project-tile:hover .project-info {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html"><button>Home</button></a>
+        <div>
+          <a href="projects.html"><button>Projects</button></a>
+          <a href="work.html"><button>Work</button></a>
+          <a href="about.html"><button>About Me</button></a>
+        </div>
+    </header>
+
+<div class="project-container">
+    
+    <div class="project-tile">
+        <a href="https://groupc-plants-endangerment.shinyapps.io/Finaldeployed/#section-project-background">
+            <img src="images/project7-icon.png" alt="Project 1">
+            <div class="project-info">
+                <h3>Cruel World for Endangered Plants</h3>
+                <p>A data visualization project focused on the endangered status of plant species in the US</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="project-tile">
+        <a href="project2.html">
+            <img src="images/project2-icon.png" alt="Project 2">
+            <div class="project-info">
+                <h3>OpenBalloons</h3>
+                <p>A creative project in OpenFrameworks</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="project-tile">
+        <a href="project1.html">
+            <img src="images/project3-icon.png" alt="Project 3">
+            <div class="project-info">
+                <h3>Project 3</h3>
+                <p>A brief summary of Project 3 goes here.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="project-tile">
+        <a href="project1.html">
+            <img src="images/project4-icon.png" alt="Project 4">
+            <div class="project-info">
+                <h3>Project 4</h3>
+                <p>A brief summary of Project 4 goes here.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="project-tile">
+        <a href="project1.html">
+            <img src="images/project5-icon.png" alt="Project 5">
+            <div class="project-info">
+                <h3>Project 5</h3>
+                <p>A brief summary of Project 5 goes here.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="project-tile">
+        <a href="http://chachagsedaro.pythonanywhere.com/">
+            <img src="images/project6-icon.png" alt="Project 6">
+            <div class="project-info">
+                <h3>Image to Midi</h3>
+                <p>Converts any given image into unique midi patterns that can be used by itself or in music production with DAWs</p>
+            </div>
+        </a>
+    </div>
+    <!-- Repeat the structure for other projects -->
+</div>
+
+</body>
+</html>
