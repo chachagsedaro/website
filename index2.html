@@ -34,45 +34,52 @@
     }
 
     .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;}
-    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slideshow {
+      max-width: 300px;
+      height: auto;
+      margin-right: 20px;
+      margin-top: 150px;
+      overflow: hidden;
+    }
+
+    .image {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.5s ease-in-out;
+    }
+
     img {
-    max-width: 25%;
-    max-height:15%;
-    float: inline-start;}
-    
+      max-width: 100%;
+      height: auto;
+    }
+
     .text {
-    font-size: 20px;
-    padding-left: 20px;
-    padding-top: 10%;
-    float: right;
-  }
+      font-size: 20px;
+      padding-left: 20px;
+      padding-top: 10%;
+      float: right;
+    }
 
     #content {
       max-width: 600px;
       text-align: left;
       padding: 20px;
     }
-    
 
     #punjabiText {
       font-size: 500; /* Three times the size of English text */
-    }
-
-    #image {
-      max-width: 300px;
-      height: auto;
-      margin-right: 20px;
-      margin-top: 150px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="home.html"><button>Home</button></a>
+    <a href="index.html"><button>Home</button></a>
     <div>
       <a href="projects.html"><button>Projects</button></a>
       <a href="work.html"><button>Work</button></a>
@@ -81,16 +88,19 @@
   </header>
 
   <div class="container">
-    <div class="image">
-    <img id="image" src="image.jpeg" alt="Image">
-  </div>
+    <div class="slideshow">
+      <div class="image">
+        <img src="images/home/1.jpeg" alt="baby chacha">
+        
+      </div>
+    </div>
 
-    <div class = "text" id="punjabiText">
+    <div class="text" id="punjabiText">
       ਜੀ ਆਇਆਂ ਨੂੰ | <br>
       Welcome. <br>
 
       <br>
-      
+
       ਮੇਰਾ ਨਾਮ ਵੰਸ਼ ਮੁਰਾਦ ਕਾਲੀਆ ਹੈ | <br>
       My name is Vansh Murad Kalia. <br><br>
 
@@ -100,6 +110,20 @@
       And I love to do things. 
     </div>
   </div>
+
+  <script>
+    // JavaScript for the slideshow
+    const imageContainer = document.querySelector('.image');
+    let currentIndex = 0;
+
+    function showNextImage() {
+      currentIndex = (currentIndex + 1) % 3;
+      const translateValue = -currentIndex * 100 + '%';
+      imageContainer.style.transform = 'translateY(' + translateValue + ')';
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+  </script>
 
 </body>
 </html>
