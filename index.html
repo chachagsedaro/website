@@ -66,18 +66,34 @@
     </style>
 </head>
 <body>
+    <audio id="backgroundAudio">
+    <source src="Für Elise - Beethoven (No Copyright Music).mp3" type="audio/mp3">
+    </audio>
 
 <div id="animation-container">
-    <button class="playground" onclick="goToPlayground()">Playground</button>
+    <button class="playground" onclick="goToPlayground()">Bubbles</button>
     <button class="portfolio" onclick="goToPortfolio()">Portfolio</button>
 </div>
 
 <div class="rain-container" id="rain-container"></div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        createRain();
+     // Get the audio element
+     var audio = document.getElementById("backgroundAudio");
+
+document.addEventListener("DOMContentLoaded", function () {
+    var audio = document.getElementById("backgroundAudio");
+
+    // Play the audio in response to a user interaction
+    document.addEventListener("click", function() {
+        audio.play().catch(function(error) {
+            console.error("Autoplay was prevented:", error);
+            // Handle the error or display a button to let the user start playback manually
+        });
     });
+
+    createRain();
+});
 
     function createRain() {
         var container = document.getElementById("rain-container");

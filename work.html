@@ -34,33 +34,59 @@
     }
 
     .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;}
-    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px; /* Adjusted margin */
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+
     img {
-    max-width: 25%;
-    max-height:15%;
-    float: inline-start;}
-    
+      max-width: 25%;
+      max-height: 15%;
+      float: left; /* Changed to left */
+    }
+
     .text {
-    font-size: 20px;
-    padding-left: 20px;
-    padding-top: 10%;
-    float: right;
-  }
+      font-size: 20px;
+      padding-left: 20px;
+      padding-top: 10%;
+      float: right;
+    }
 
     #content {
       max-width: 580px;
       text-align: left;
       padding: 20px;
     }
-    
 
     #image {
       max-width: 700px;
       height: auto;
       margin-right: 20px;
+    }
+
+    iframe {
+      border-radius: 12px;
+      margin: 20px 0; /* Adjusted margin */
+    }
+
+    /* Added new style for video containers */
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .video-item {
+      flex: 0 0 calc(33.33% - 20px);
+      margin: 10px;
     }
   </style>
 </head>
@@ -75,26 +101,48 @@
     </div>
   </header>
 
-  <container
-  <h1> Music</h1>
-  <div>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/36S9vsb80k3tZZwoRePmDh?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>  </div>
-  <br> <br>
-  <h1> Videos </h1>
+  <div class="container">
+    <h1>Music</h1>
+  </div>
 
-<div>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/7oG8iSZQcDY?si=Yb5QOc4nIQvxKUOb" title="kaliathon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LYqyUAFLxNA?si=lselS61FxZ7G6ptj" title="TR!C - Close Alive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CKx9ccIrKNA?si=nA1QzECf0gYDfmT9" title="namurad - the satisfying purity of indignation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ca_fkROGxcg?si=KqIdHSTB8OlIE5kc" title="Hassaan E - Kehtameen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DBhiwo3E720?si=hyt8R6QLZrpfV9Za" title="kasah - You Are My Everyone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1nhZQbSk4is?si=-6Y4IZ-NkYBiHqyD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="content">
+    <!-- Added missing div for content -->
+    <iframe src="https://open.spotify.com/embed/artist/36S9vsb80k3tZZwoRePmDh?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
 
-</div>
+  <div class="container">
+    <h1>Videos</h1>
+  </div>
 
-  <h1> Short Film </h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wF-OwEfTicI?si=bjQ8MjyPAr8-ZZF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!-- Added video containers -->
+  <div class="content video-container">
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7oG8iSZQcDY?si=Yb5QOc4nIQvxKUOb" title="kaliathon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LYqyUAFLxNA?si=lselS61FxZ7G6ptj" title="TR!C - Close Alive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CKx9ccIrKNA?si=nA1QzECf0gYDfmT9" title="namurad - the satisfying purity of indignation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ca_fkROGxcg?si=KqIdHSTB8OlIE5kc" title="Hassaan E - Kehtameen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DBhiwo3E720?si=hyt8R6QLZrpfV9Za" title="kasah - You Are My Everyone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1nhZQbSk4is?si=-6Y4IZ-NkYBiHqyD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Short Film</h1>
+  </div>
+
+  <div class="content">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wF-OwEfTicI?si=bjQ8MjyPAr8-ZZF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
 
 </body>
 </html>
-
