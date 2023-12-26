@@ -34,6 +34,11 @@
             color: #fff;
         }
 
+        button.films {
+            background-color: #f5d76e; /* Pastel Red */
+            color: #fff;
+        }
+
         button:hover {
             opacity: 0.8;
         }
@@ -71,6 +76,7 @@
     </audio>
 
 <div id="animation-container">
+    <button class="films" onclick="goToFilms()">Lost Films</button>
     <button class="playground" onclick="goToPlayground()">Bubbles</button>
     <button class="portfolio" onclick="goToPortfolio()">Portfolio</button>
 </div>
@@ -111,6 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function randomLetter() {
         var alphabet = "PICKONE";
         return alphabet[Math.floor(Math.random() * alphabet.length)];
+    }
+
+    function goToFilms() {
+        window.location.href = 'film_images/test_sphere.html';
     }
 
     function goToPlayground() {
