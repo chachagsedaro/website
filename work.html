@@ -12,26 +12,28 @@
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #a3d69e; /* Pastel color for the header background */
-    }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #a3d69e; /* Pastel color for the header background */
+        }
 
-    button {
-      padding: 10px;
-      background-color: #87CEFA; /* Pastel color for the button background */
-      border: none;
-      border-radius: 5px;
-      color: #fff; /* White text on pastel button */
-      cursor: pointer;
-      text-decoration: none; /* Remove default underline style for links */
-    }
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
 
-    button:hover {
-      background-color: #6495ED; /* Darker shade for the button background on hover */
-    }
+        header button {
+            background-color: #87CEFA;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+            color: #fff;
+        }
 
     .container {
       display: flex;
