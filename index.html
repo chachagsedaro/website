@@ -13,6 +13,9 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            background-image: url('whitemelon.png'); /* Add the background image */
+            background-repeat: repeat; /* Repeat the image */
+            background-size: 500px;
         }
 
         button {
@@ -37,6 +40,19 @@
         button.films {
             background-color: #f5d76e; /* Pastel Red */
             color: #fff;
+        }
+
+        #button-container {
+            padding: 30px; /* Add padding for spacing */
+            border-radius: 5px; /* Rounded corners for the box */
+            background-color: #9df0fd;
+            display: flex;
+            justify-content: space-around; /* Space out the buttons */
+            align-items: center;
+        }
+
+        animation-container {
+            background-color: #9df0fd;
         }
 
         button:hover {
@@ -71,11 +87,9 @@
     </style>
 </head>
 <body>
-    <audio id="backgroundAudio">
-    <source src="Für Elise - Beethoven (No Copyright Music).mp3" type="audio/mp3">
-    </audio>
+    
 
-<div id="animation-container">
+<div id="button-container">
     <button class="films" onclick="goToFilms()">Lost Films</button>
     <button class="playground" onclick="goToPlayground()">Bubbles</button>
     <button class="portfolio" onclick="goToPortfolio()">Portfolio</button>
