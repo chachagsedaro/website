@@ -12,36 +12,25 @@
             margin: 0;
             padding: 0;
             background-color: #6b6bf0;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #6b6bf0; /* Pastel color for the header background */
-    }
-
-    button {
-      padding: 10px;
-      background-color: #87CEFA; /* Pastel color for the button background */
-      border: none;
-      border-radius: 5px;
-      color: #fff; /* White text on pastel button */
-      cursor: pointer;
-      text-decoration: none; /* Remove default underline style for links */
-    }
-
-    button:hover {
-      background-color: #6495ED; /* Darker shade for the button background on hover */
-    }
+        #content-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
         #slider-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px; /* Adjust the maximum width as needed */
-            margin: auto;
+            width: 60%;
+            max-width: 800px;
+            margin-right: 20px;
         }
 
         #slider {
@@ -58,26 +47,42 @@
             top: 0;
             right: 0;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Adjust background opacity as needed */
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        #paragraph-container {
+            flex: 1;
+        }
+
+        #paragraph {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
-
-<div id="slider-container">
-    <div id="slider">
-        <!-- Image slides -->
-        <div><img src="images/1.JPG" alt="Photo 1" width="900" height="460"></div>
-        <div><img src="images/2.JPG" alt="Photo 2" width="900" height="460"></div>
-        <div><img src="images/3.JPG" alt="Photo 3" width="900" height="460"></div>
-        <div>
-            <video width="100%" height="auto" controls>
-                <source src="images/video.mp4" type="video/mp4">
-            </video>
+<div id="content-container">
+    <div id="slider-container">
+        <div id="slider">
+            <!-- Image slides -->
+            <div><img src="images/1.JPG" alt="Photo 1" width="900" height="460"></div>
+            <div><img src="images/2.JPG" alt="Photo 2" width="900" height="460"></div>
+            <div><img src="images/3.JPG" alt="Photo 3" width="900" height="460"></div>
+            <div>
+                <video width="100%" height="auto" controls>
+                    <source src="images/video.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </div>
 
+    <div id="paragraph-container">
+        <div id="paragraph">
+            <p>Based on the Adafruit Bluefruit microcontroller, this device detects light and color using a sensor which is converted into sound in real-time with a unique sound for each color and light frequency.</p>
+        </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
