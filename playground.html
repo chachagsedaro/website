@@ -52,6 +52,15 @@
   </audio>
 
   <script src="sketch.js"></script>
+  <script>
+    function playBackgroundAudio() {
+        var audio = document.getElementById('backgroundAudio');
+        audio.play();
+    }
+
+    document.body.addEventListener('click', playBackgroundAudio);
+</script>
+
 
 </body>
 </html>

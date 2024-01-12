@@ -1,40 +1,33 @@
 let circles = [];
-const maxCircles = 20; // Maximum number of circles on the canvas
-const newCircleInterval = 2000; // Interval for creating new circles (milliseconds)
-const circleLifetime = 5000; // Lifetime of circles (milliseconds)
+const maxCircles = 20;
+const newCircleInterval = 2000;
+const circleLifetime = 5000;
 let lastNewCircleTime = 0;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); // Use the window's dimensions
+  createCanvas(windowWidth, windowHeight);
   noFill();
   stroke(255);
-  background(255);
-
-  // Generate a random number of initial circles between a minimum and maximum value
-  const minInitialCircles = 5; // Adjust as needed
-  const maxInitialCircles = 15; // Adjust as needed
-  const numInitialCircles = int(random(minInitialCircles, maxInitialCircles + 1));
-
-  // Create the random number of initial circles
-  for (let i = 0; i < numInitialCircles; i++) {
-    addNewCircle();
-  }
 }
 
 function draw() {
-  background(255);
+  // Interactive background
+  let bgColor = map(mouseX, 0, width, 0, 255);
+  background(10, bgColor - 50, 100);
 
+  // Draw colorful trails
+  blendMode(ADD);
   for (let i = circles.length - 1; i >= 0; i--) {
     let circle = circles[i];
     circle.interact(circles);
     circle.move();
     circle.display();
 
-    // Remove circles that have faded away or are too small
     if (millis() - circle.birthTime > circleLifetime || circle.radius < 10) {
       circles.splice(i, 1);
     }
   }
+  blendMode(BLEND);
 
   // Create new circles periodically
   if (millis() - lastNewCircleTime > newCircleInterval && circles.length < maxCircles) {
@@ -49,10 +42,14 @@ function mouseMoved() {
   }
 }
 
-function addNewCircle() {
-  let radius = random(20, 60); // Limit the circle size
-  let x = random(radius, width - radius);
-  let y = random(radius, height - radius);
+function mousePressed() {
+  // Create burst of smaller circles on mouse click
+  for (let i = 0; i < 5; i++) {
+    addNewCircle(mouseX, mouseY, random(5, 15));
+  }
+}
+
+function addNewCircle(x = random(width), y = random(height), radius = random(20, 60)) {
   let color = getRandomColor();
   circles.push(new Circle(x, y, radius, color));
 }
